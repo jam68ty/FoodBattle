@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">FoodBattle</string>
+    <string name="welcome">歡迎回來</string>
+    <string name="account">帳號</string>
+    <string name="password">密碼</string>
+    <string name="remember">記得我的帳號密碼</string>
+    <string name="signIn">登入</string>
+    <string name="register">註冊新帳號</string>
+    <string name="check">檢查帳號</string>
+    <string name="email">Email</string>
+    <string name="check_password">確認密碼</string>
+    <string name="go_to_login">已經有帳號？登入</string>
+    <string name="sign_up">立即註冊</string>
+    <string name="input_number">請輸入信箱收到的認證碼</string>
+    <string name="ok">確認</string>
+    <string name="resend">重新寄出</string>
+    <string name="try_another">試試看別的信箱</string>
+    <string name="send">寄出新的驗證碼</string>
+    <string name="sucess">恭喜！驗證成功</string>
+    <string name="next">下一步</string>
+    <string name="fail">很可惜！驗證失敗</string>
+    <string name="rewrite">重新輸入驗證碼</string>
+    <string name="name">暱稱</string>
+    <string name="style">料理風格</string>
+    <string name="dish">拿手菜</string>
+    <string name="introduce">自我介紹</string>
+    <string name="skip">跳過</string>
+    <string name="todo">TODO</string>
+    <string name="nav_menu">推薦菜單</string>
+    <string name="nav_account">個人空間</string>
+    <string name="nav_market">團購市集</string>
+
+    <string name="todayrecommend">今日推薦</string>
+    <string name="cake1">優格戚風蛋糕</string>
+    <string name="cake1info">份量:4人份\n分類:甜點\n難易度:★★(簡單)</string>
+    <string name="cake1info2">份量:2人份\n分類:甜點\n難易度:★★★(普通)</string>
+    <string name="cake1info3">份量:2人份\n分類:義式\n難易度:★★★★(偏難)</string>
+    <string name="cake1info4">份量:1人份\n分類:甜點\n難易度:★★(簡單)</string>
+    <string name="more">></string>
+    <string name="like">2000</string>
+    <string name="chinese">中式料理</string>
+    <string name="follow">追蹤</string>
+    <string name="heart">♥</string>
+    <string name="space">     </string>
+    <string name="italy">義式料理</string>
+    <string name="desert">各式甜點</string>
+    <string name="back">◄</string>
+    <string name="styledish">料理風格/拿手菜</string>
+    <string name="post">我發表的菜單</string>
+    <string name="collect">我收藏的菜單</string>
+    <string name="cake2">檸檬戚風蛋糕</string>
+    <string name="chicken">迷迭香煎雞排</string>
+    <string name="icecream">香蕉派冰淇淋</string>
+    <string name="buyers">50</string>
+    <string name="buy">跟團</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
