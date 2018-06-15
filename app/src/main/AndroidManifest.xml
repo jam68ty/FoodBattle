@@ -32,7 +32,7 @@
         <activity
             android:name=".menu_cake"
             android:label="菜單內容" />
-        <activity android:name=".test"></activity>
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>
