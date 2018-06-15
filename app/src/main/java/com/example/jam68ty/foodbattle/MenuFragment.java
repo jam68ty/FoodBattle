@@ -1,29 +1,27 @@
 package com.example.jam68ty.foodbattle;
 
-
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.transition.ChangeBounds;
-import android.transition.ChangeImageTransform;
-import android.transition.ChangeTransform;
-import android.transition.TransitionSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MenuFragment extends Fragment implements View.OnClickListener {
+public class MenuFragment extends Fragment {
     private Button button;
+    OnFragmentSendText onFragmentSendText;
+    Button More1;
 
+
+public interface OnFragmentSendText{
+}
     public MenuFragment() {
         // Required empty public constructor
     }
@@ -32,26 +30,15 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_menu, container, false);
-        return view;
+        View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
+
+        return rootView;
+
+
+
     }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initView(view);
-    }
-    private void initView(View view){
-        button = view.findViewById(R.id.change);
-        button.setOnClickListener(this);
-    }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.change:
-                getFragmentManager().beginTransaction().replace(R.id.main_fragment,new ChineseMenuFragment()).addToBackStack(null).commit();
-                break;
-        }
-    }
+
+
 }

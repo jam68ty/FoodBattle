@@ -1,13 +1,22 @@
 package com.example.jam68ty.foodbattle;
 
 public class Menus {
-    String menuName, menuCate, menuDegree, menuAmount;
+    String menuName, menuCate, menuDegree, menuAmount,menuImage;
 
-    public Menus(String menuName, String menuCate, String menuDegree, String menuAmount) {
+    public Menus(String menuName, String menuCate, String menuDegree, String menuAmount,String menuImage) {
         this.menuName = menuName;
         this.menuCate = menuCate;
         this.menuDegree = menuDegree;
         this.menuAmount = menuAmount;
+        this.menuImage = menuImage;
+    }
+
+    public String getMenuImage() {
+        return menuImage;
+    }
+
+    public void setMenuImage(String menuImage) {
+        this.menuImage = menuImage;
     }
 
     public String getMenuDegree() {
