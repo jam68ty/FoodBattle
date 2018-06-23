@@ -8,6 +8,8 @@ import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -21,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -47,11 +50,9 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 
 public class ChineseMenuFragment extends Fragment {
 
-    FirebaseFirestore db;
-    RecyclerView mRecyclerView;
-    ArrayList<Menus> menusArrayList;
-    MyRecyclerViewAdapter adapter;
-    DatabaseReference mDatabaseRef;
+    RecyclerView recyclerView;
+    FirebaseDatabase mFirebaseDatabase;
+    DatabaseReference mRef;
 
     public ChineseMenuFragment() {
         // Required empty public constructor
@@ -61,48 +62,38 @@ public class ChineseMenuFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chinese_menu, container, false);
-        menusArrayList = new ArrayList<>();
-        mRecyclerView = view.findViewById(R.id.mRecyclerView);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        /*ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+        actionBar.setTitle("Post List");*/
+
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mRef = mFirebaseDatabase.getReference("image");
 
 
-        setUpFireBase();
-        loadDataFormFirebase();
         return view;
     }
 
-    private void loadDataFormFirebase() {
-        if (menusArrayList.size() > 0)
-            menusArrayList.clear();
-        db.collection("menus")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseRecyclerAdapter<Model, ViewHolder> firebaseRecyclerAdapter =
+                new FirebaseRecyclerAdapter<Model, ViewHolder>(
+                        Model.class,
+                        R.layout.row,
+                        ViewHolder.class,
+                        mRef
+                ) {
                     @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        for (DocumentSnapshot querySnapshot : task.getResult()) {
-                            Menus menus = new Menus(querySnapshot.getString("name"),
-                                    querySnapshot.getString("cate"),
-                                    querySnapshot.getString("degree"),
-                                    querySnapshot.getString("amount"),
-                                    querySnapshot.getString("image_link"));
-                            menusArrayList.add(menus);
-                        }
-                        adapter = new MyRecyclerViewAdapter(ChineseMenuFragment.this, menusArrayList);
-                        mRecyclerView.setAdapter(adapter);
+                    protected void populateViewHolder(ViewHolder viewHolder, Model model, int position) {
+                        viewHolder.setDetails(getApplicationContext(), model.getName(), model.getUrl());
+                        //viewHolder.setDetails(getApplicationContext(),model.getTitle(),model.getDescription(),model.getImage());
                     }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getActivity(), "Problem ---1---", Toast.LENGTH_SHORT).show();
-                        Log.w("---1---", e.getMessage());
-                    }
-                });
-    }
+                };
 
-    private void setUpFireBase() {
-        db = FirebaseFirestore.getInstance();
+        recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 
 }

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "902596252449-kb83fifopcpnu9te3po27do3an4smhbg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jam68ty.foodbattle",
+            "certificate_hash": "dd5f1dddf9fec847e75d6cd79340633a9063a915"
+          }
+        },
+        {
           "client_id": "902596252449-ugtpk74bdul850gpjshvo7a2kmsmr7aq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
