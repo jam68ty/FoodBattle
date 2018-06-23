@@ -17,6 +17,8 @@ public class ViewPagerAdapter extends PagerAdapter{
     private Integer [] menu_cake = {R.drawable.cake_1,R.drawable.cake_2,R.drawable.cake_3,R.drawable.cake_4,R.drawable.cake_5,R.drawable.cake_6,R.drawable.cake_7,R.drawable.cake_8,R.drawable.cake_9,R.drawable.cake_10};
     private Integer [] cake_info5 = {R.string.cake_info5_1,R.string.cake_info5_2,R.string.cake_info5_3,R.string.cake_info5_4,R.string.cake_info5_5,R.string.cake_info5_6,R.string.cake_info5_7,R.string.cake_info5_8,R.string.cake_info5_9,R.string.cake_info5_10};
 
+
+
     public ViewPagerAdapter(Context context) {
         this.context = context;
     }

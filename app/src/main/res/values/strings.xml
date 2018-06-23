@@ -127,6 +127,25 @@
 
     <string name="cake_info7">★★☆☆☆</string>
 
+    <string name="vegetable">醬炒空心菜</string>
+
+    <string name="shrimp">甜椒炒蝦仁</string>
+
+
+    <string name="buy_info1">商品名稱</string>
+    <string name="buy_info2">人數限制</string>
+    <string name="buy_info3">付款方式</string>
+    <string name="buy_info4">配送方式</string>
+    <string name="buy_info5">預估到貨日期</string>
+    <string name="buy_info6">相關照片</string>
+
+
+    <string name="cake_buy_info1">無油蛋糕也可以很濕潤!\n利用優格的保濕性讓蛋糕變得健康又美味,\n食材更是簡單,只要4種食材就能搞定~\n表面是淋上優格,不是鮮奶油!\n再用新鮮水果裝飾就超完美!</string>
+    <string name="cake_buy_info2">至少20人/最多100人</string>
+    <string name="cake_buy_info3">貨到付款</string>
+    <string name="cake_buy_info4">宅配</string>
+    <string name="cake_buy_info5">2018.06.15</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 

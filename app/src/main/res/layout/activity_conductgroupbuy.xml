@@ -8,13 +8,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="505dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,57 +26,40 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:background="@color/transWhite"
+                    android:background="@android:color/transparent"
                     app:srcCompat="@drawable/add" />
 
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@color/transWhite"
+                    android:background="@android:color/transparent"
                     app:srcCompat="@drawable/add" />
 
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="40dp"
                     android:layout_weight="1"
-                    android:background="@color/transWhite"
-                    app:srcCompat="@drawable/add" />
-
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:background="@color/transWhite"
-                    app:srcCompat="@drawable/add" />
+                    android:text="點擊加入圖片"
+                    android:textColor="@color/darkGray"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="87dp" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="140dp"
-                android:layout_marginRight="0dp"
-                android:layout_marginTop="10dp"
-                android:text="點擊加入圖片，請至少選擇一張"
-                android:textColor="@color/darkGray"
-                tools:layout_editor_absoluteX="172dp"
-                tools:layout_editor_absoluteY="87dp" />
 
 
             <LinearLayout
@@ -108,8 +92,9 @@
                             android:layout_height="wrap_content">
 
                             <android.support.design.widget.TextInputEditText
-                                android:layout_width="150dp"
-                                android:layout_height="wrap_content" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="優格戚風蛋糕" />
                         </android.support.design.widget.TextInputLayout>
 
                     </TableRow>
@@ -132,7 +117,8 @@
 
                             <android.support.design.widget.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent" />
+                                android:layout_height="wrap_content"
+                                android:text="2018.05.02" />
                         </android.support.design.widget.TextInputLayout>
                     </TableRow>
 
@@ -154,7 +140,8 @@
 
                             <android.support.design.widget.TextInputEditText
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent" />
+                                android:layout_height="match_parent"
+                                android:text="2018.05.20" />
                         </android.support.design.widget.TextInputLayout>
                     </TableRow>
 

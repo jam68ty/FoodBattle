@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginback"
+    tools:context=".ModifyPersonalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="117dp"
+            android:layout_height="102dp"
+            android:layout_gravity="center"
+            android:background="@drawable/user"
+            android:elevation="0dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="暱稱："
+                    android:textSize="20dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_span="2"
+                        android:background="@drawable/rounded_edittext2"
+                        android:ems="10"
+                        android:hint="請輸入暱稱"
+                        android:padding="7sp" />
+
+                </android.support.design.widget.TextInputLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="料理風格："
+                    android:textSize="20dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_span="2"
+                        android:background="@drawable/rounded_edittext2"
+                        android:ems="10"
+                        android:hint="請輸入料理風格"
+                        android:padding="7sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="102dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="拿手菜："
+                    android:textSize="20dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_span="2"
+                        android:background="@drawable/rounded_edittext2"
+                        android:ems="10"
+                        android:hint="請輸入拿手菜"
+                        android:padding="7sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="184dp">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:lines="4"
+                    android:minLines="4"
+                    android:paddingLeft="10dp"
+
+                    android:text="自我介紹："
+                    android:textSize="20dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="234dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="0dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_span="2"
+                        android:background="@drawable/rounded_edittext2"
+                        android:ems="10"
+                        android:hint="請輸入自我介紹"
+                        android:padding="7sp" />
+
+                </android.support.design.widget.TextInputLayout>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="223dp"
+            android:layout_height="63dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_edittext"
+            android:text="確認"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

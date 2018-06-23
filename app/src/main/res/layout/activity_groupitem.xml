@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/back">
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,25 +21,64 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="292dp"
-                android:background="@drawable/cake"
                 android:orientation="horizontal">
 
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cake"
+                    tools:ignore="ContentDescription" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/cakename"
-                    android:layout_width="473dp"
+                <LinearLayout
+                    android:layout_width="510dp"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/cake2_0"
-                    tools:ignore="ContentDescription" />
+                    android:background="@drawable/rounded_corner_name"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cake_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/cake1"
+                        android:textColor="@color/darkGray"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/cake_group_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="設單日期:2018.05.02"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/cake_group_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="收單日期:2018.05.30"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="20sp" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -50,84 +89,219 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
                         android:orientation="horizontal">
 
                         <ImageButton
-                            android:id="@+id/like"
-                            android:layout_width="0dp"
-                            android:layout_height="32dp"
-                            android:layout_marginTop="20dp"
+                            android:id="@+id/buyer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@android:color/transparent"
                             app:srcCompat="@drawable/users"
                             tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:id="@+id/likeamount"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/buyer_amount"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
                             android:layout_weight="1"
-                            android:text="@string/buyers"
+                            android:text="100"
                             android:textSize="20sp" />
                     </LinearLayout>
 
-                    <LinearLayout
+                    <Button
+                        android:id="@+id/buy_button"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e69fe378"
+                        android:text="@string/buy" />
 
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_weight="1"
-                            android:background="#e69fe378"
-                            android:text="@string/buy" />
-                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/cake2_1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/cake2_1"
-                tools:ignore="ContentDescription" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_info"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/cake2_2"
+                <TextView
+                    android:id="@+id/buy_info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/buy_info1"
+                    android:textColor="#FF9999"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cake_buy_info1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cake_buy_info1"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/cake2_2"
-                tools:ignore="ContentDescription" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_info"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/cake2_3"
+                <TextView
+                    android:id="@+id/buy_info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/buy_info2"
+                    android:textColor="#FF9999"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cake_buy_info2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cake_buy_info2"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/cake2_3"
-                tools:ignore="ContentDescription" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_info"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/cake2_4"
+                <TextView
+                    android:id="@+id/buy_info3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/buy_info3"
+                    android:textColor="#FF9999"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cake_buy_info3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cake_buy_info3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/cake2_4"
-                tools:ignore="ContentDescription" />
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_info"
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/cake2_5"
+                <TextView
+                    android:id="@+id/buy_info4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/buy_info4"
+                    android:textColor="#FF9999"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cake_buy_info4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cake_buy_info4"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                app:srcCompat="@drawable/cake2_5"
-                tools:ignore="ContentDescription" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_info"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/buy_info5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/buy_info5"
+                    android:textColor="#FF9999"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cake_buy_info5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cake_buy_info5"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle_info"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/buy_info6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:hapticFeedbackEnabled="false"
+                    android:text="@string/buy_info6"
+                    android:textColor="#FF9999"
+                    android:textSize="18sp" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager_buy_cake_info5"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"></android.support.v4.view.ViewPager>
+
+                <LinearLayout
+                    android:id="@+id/SliderDots"
+
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </LinearLayout>
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

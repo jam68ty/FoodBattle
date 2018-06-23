@@ -180,7 +180,7 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info1"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
                 <TextView
@@ -208,7 +208,7 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info2"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
                 <TextView
@@ -236,7 +236,7 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info3"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
                 <TextView
@@ -264,7 +264,7 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info4"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
                 <TextView
@@ -292,14 +292,13 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info5"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/viewPager_cake_info5"
                     android:layout_width="match_parent"
-                    android:layout_height="450dp">
-                </android.support.v4.view.ViewPager>
+                    android:layout_height="500dp"></android.support.v4.view.ViewPager>
 
                 <LinearLayout
                     android:id="@+id/SliderDots"
@@ -329,13 +328,21 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info6"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
-                <VideoView
-                    android:id="@+id/videoView"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -357,7 +364,7 @@
                     android:layout_gravity="center_vertical|center"
                     android:hapticFeedbackEnabled="false"
                     android:text="@string/menu_info7"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="#FF9999"
                     android:textSize="18sp" />
 
                 <TextView

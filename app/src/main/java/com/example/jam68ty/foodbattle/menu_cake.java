@@ -4,8 +4,13 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import java.util.Vector;
 
 public class menu_cake extends AppCompatActivity {
     ViewPager viewPager;
@@ -13,11 +18,17 @@ public class menu_cake extends AppCompatActivity {
     private int dotscount;
     private ImageView[] dots;
 
+    //YT影片
+    RecyclerView recyclerView;
+    Vector<YouTubeVideos> youTubeVideos = new Vector<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_cake);
 
+
+        //viewpager菜單步驟教學
         viewPager = (ViewPager) findViewById(R.id.viewPager_cake_info5);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(viewPagerAdapter);
@@ -55,6 +66,16 @@ public class menu_cake extends AppCompatActivity {
 
             }
         });
+
+        //YT影片
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        youTubeVideos.add(new YouTubeVideos("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/kI1bYMyrlNw\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"));
+
+        VideoAdapter videoAdapter = new VideoAdapter(youTubeVideos);
+        recyclerView.setAdapter(videoAdapter);
 
     }
 }

@@ -8,22 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
+import android.widget.ImageButton;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MenuFragment extends Fragment implements View.OnClickListener {
-    private Button More2;
-    OnFragmentSendText onFragmentSendText;
-    Button More1;
+public class MenuFragment extends Fragment {
 
 
 
 
-    public interface OnFragmentSendText{
-}
     public MenuFragment() {
         // Required empty public constructor
     }
@@ -32,26 +27,41 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
+
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
+
+        //more1按鈕連到優格戚風蛋糕
+        Button more1 = (Button) view.findViewById(R.id.more1);
+        more1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), menu_cake.class);
+                //intent.putExtra("some","some data");
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imagecake = (ImageButton) view.findViewById(R.id.imagecake);
+        imagecake.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), menu_cake.class);
+                //intent.putExtra("some","some data");
+                startActivity(intent);
+            }
+        });
+
+
         return view;
+
+
+
     }
 
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initView(view);
-    }
 
-    private void initView(View view) {
-        More2 = view.findViewById(R.id.more2);
-        More2.setOnClickListener(this);
-    }
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.more2:
-                getFragmentManager().beginTransaction().replace(R.id.main_fragment, new ChineseMenuFragment()).addToBackStack(null).commit();
-                break;
-        }
-    }
+
+
 }

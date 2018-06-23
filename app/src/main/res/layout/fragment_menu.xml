@@ -161,47 +161,96 @@
                         android:text="@string/more" />
                 </LinearLayout>
 
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
 
-                    <ImageButton
-                        android:id="@+id/imagechinesse1"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/chinese"
-                        tools:ignore="ContentDescription" />
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/imagechinesse2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/chinese2"
-                        tools:ignore="ContentDescription" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/imagechinesse3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/chinese3"
-                        tools:ignore="ContentDescription" />
-                </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/imagechinesse3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/chinese3"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:foregroundGravity="center"
+                                android:text="家常醬醃魚排" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imagechinesse2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/chinese2"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/vegetable" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imagechinesse1"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/chinese"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/shrimp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
 
             </LinearLayout>
 
@@ -239,47 +288,95 @@
                         android:text="@string/more" />
                 </LinearLayout>
 
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
 
-                    <ImageButton
-                        android:id="@+id/imageItaly1"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/spe"
-                        tools:ignore="ContentDescription" />
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/imageItaly2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/meatball"
-                        tools:ignore="ContentDescription" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/imageItaly3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/chicken"
-                        tools:ignore="ContentDescription" />
-                </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/imageItaly1"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/spe"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="經典茄汁義大利麵" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageItaly2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/meatball"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="起司肉丸" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imageItaly3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/chicken"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/chicken" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
 
             </LinearLayout>
 
@@ -318,47 +415,95 @@
                         android:text="@string/more" />
                 </LinearLayout>
 
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
 
-                    <ImageButton
-                        android:id="@+id/imagedesert1"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/cake2"
-                        tools:ignore="ContentDescription" />
+                        android:layout_height="match_parent"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/imagedesert2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/desert"
-                        tools:ignore="ContentDescription" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/imagedesert3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/cake3"
-                        tools:ignore="ContentDescription" />
-                </LinearLayout>
+                            <ImageButton
+                                android:id="@+id/imagedesert1"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/cake2"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="藍莓戚風蛋糕" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imagedesert2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/desert"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/icecream" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/imagedesert3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@android:color/transparent"
+                                app:srcCompat="@drawable/cake3"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/textView17"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="檸檬戚風蛋糕" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
 
             </LinearLayout>
 
